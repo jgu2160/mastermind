@@ -1,6 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/mastermind'
+require './lib/evaluator'
+require './lib/printer'
 
 class MastermindTest < MiniTest::Test
 
@@ -21,9 +23,7 @@ class MastermindTest < MiniTest::Test
 		assert_equal 4, @evaluator.match_position("gggg")
 		assert_equal 2, @evaluator.match_position("gbgb")
 	end
-
 #test mastermind
-
 	def test_it_only_accepts_valid_RBGY_or_rbgy_4_strings
 		assert_equal "bggg", @mastermind.user_input("bggg")
 		assert_equal Printer.too_few, @mastermind.user_input("YYY")
