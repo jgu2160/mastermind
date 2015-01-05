@@ -1,6 +1,5 @@
 class Evaluator
-
-	def initialize(target_array = ["g", "g", "g", "g"])
+	def initialize(target_array = ["G", "G", "G", "G"])
 		@target_array = target_array
 	end
 
@@ -21,5 +20,4 @@ class Evaluator
 		user_uniq_array.each {|x| @target_array.include?(x) ? color_count +=1:nil}
 		color_count
 	end
-
 end

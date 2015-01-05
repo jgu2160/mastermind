@@ -24,7 +24,7 @@ class MastermindTest < MiniTest::Test
 		assert_equal 2, @evaluator.match_position("gbgb")
 	end
 #test mastermind
-	def test_it_only_accepts_valid_RBGY_or_rbgy_4_strings
+	def test_it_only_accepts_valid_RBGY_or_rbgy_4_stringsx
 		assert_equal "bggg", @mastermind.user_input("bggg")
 		assert_equal Printer.too_few, @mastermind.user_input("YYY")
 		assert_equal Printer.too_many, @mastermind.user_input("ponytail")

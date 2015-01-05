@@ -3,7 +3,7 @@ require_relative "printer"
 
 class Mastermind
 	def initialize
-		@target_array = Array.new(4){['r','g','b','y'].sample}.join
+		@target_array = Array.new(4){['R','G','B','Y'].sample}.join
 		@evaluator = Evaluator.new(@target_array)
 		@guesses = 0
 		@first_time = true
@@ -23,9 +23,9 @@ class Mastermind
 
 	def user_input
 		aString = gets.chomp
-		downcased = aString.downcase
-		if downcased.length == 4 && downcased[/[rbgy]{4}/]
-			self.user_input_valid_string(downcased)
+		upcased = aString.upcase
+		if upcased.length == 4 && upcased[/[RBGY]{4}/]
+			self.user_input_valid_string(upcased)
 		elsif aString.length > 4
 			puts Printer.too_many
 			self.prompt_user
